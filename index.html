@@ -1,118 +1,100 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Pseditor : " />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Pseditor</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/augustine-wen/pseditor">View on GitHub</a>
-
-          <h1 id="project_title">Pseditor</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/augustine-wen/pseditor/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/augustine-wen/pseditor/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="pseditor" class="anchor" href="#pseditor"><span class="octicon octicon-link"></span></a>PSEditor</h1>
-
-<p>PSEditor is an open source jQuery plugin, which provides a WYSIWYG HTML editor that can be easily added into any web site, and based on CLEditor.</p>
-
-<p>For <strong>demo</strong> see:<br><a href="http://ashramwen.github.io/PSEditor/">http://ashramwen.github.io/PSEditor/</a></p>
-
-<p>For <strong>downloads</strong>, see:<br><a href="http://ashramwen.github.io/PSEditor/releases/">http://ashramwen.github.io/PSEditor/releases/</a></p>
-
-<h2>
-<a name="required" class="anchor" href="#required"><span class="octicon octicon-link"></span></a>Required</h2>
-
-<ul>
-<li>
-<a href="http://jquery.com/">jQuery</a> : 1.10.1+</li>
-<li>
-<a href="http://jqueryui.com/">jQuery UI</a> : 1.9.2+</li>
-<li>
-<a href="http://premiumsoftware.net/cleditor/">CLEditor</a> :1.4.4+</li>
-<li>jquery.cleditor.plugin.js - Cleditor Plugin (source)</li>
-<li>jquery.pseditor.min.js - jQuery Plugin (minified)</li>
-<li>jquery.pseditor.css - Style Sheet (source)</li>
-<li>images/buttons.gif - CLEditor Toolbar Button Image Strip</li>
-<li>images/toolbar.gif - CLEditor Toolbar Background Image</li>
-<li>images/btn_cancel.png - Cancel Button Image</li>
-<li>images/btn_ok.png - Ok Button Image</li>
-<li>images/btn_picL.png - Left Button Image</li>
-<li>images/btn_picR.png - Right Button Image</li>
-<li>images/outerlink.png - OuterLink Button Image</li>
-<li>images/pic_bg.png - Album Background Image</li>
-<li>images/trash.png - Trash Button Image</li>
-</ul><h2>
-<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
-
-<div class="highlight highlight-html"><pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"css/jquery.cleditor.css"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"css/pseditor.css"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://code.jquery.com/jquery-1.10.2.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"js/jquery.cleditor.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"js/jquery.cleditor.plugin.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"js/jquery.pseditor.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></div>
-
-<h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
-
-<p>Html:</p>
-
-<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"strContent"</span><span class="nt">&gt;</span>
-  ...
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-
-<p>JavaScript:</p>
-
-<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#strContent'</span><span class="p">).</span><span class="nx">PSEditor</span><span class="p">({</span>
-  <span class="nx">getImgUrl</span> <span class="o">:</span> <span class="s1">'testjson2'</span>
-<span class="p">});</span>
-</pre></div>
-
-<h2>
-<a name="option-parameter" class="anchor" href="#option-parameter"><span class="octicon octicon-link"></span></a>Option Parameter</h2>
-
-<ul>
-<li>
-<strong>getImgUrl</strong><br>
-Type: String<br>
-A string containing the URL to which the request <strong>Image List</strong> is sent, like <a href="https://github.com/ashramwen/PSEditor/blob/master/testjson2">this</a> or <a href="https://github.com/ashramwen/PSEditor/blob/master/testjson">this</a>
-</li>
-</ul>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Pseditor maintained by <a href="https://github.com/augustine-wen">augustine-wen</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.cleditor.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.pseditor.css">
+		<link rel="stylesheet" type="text/css" href="css/home_slidershow.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.cleditor.min.js"></script>
+		<script type="text/javascript" src="js/jquery.cleditor.plugin.js"></script>
+		<script type="text/javascript" src="js/jquery.pseditor.js"></script>
+		<script type="text/javascript" src="js/editor.js"></script>
+		<script type="text/javascript" src="js/homeslider_docs.js"></script>
+		<title>New Web Project</title>
+	</head>
+	<body>
+		<h1>New Web Project Page</h1>
+		<button id="getdata" type="button">Get Data</button>
+		<form>
+			<div id="strContent">
+				<div data-type="Text" data-element="文1">
+					純文字編輯器<!--點擊此行預設文字會出現CLEditor-->
+				</div>
+				<br />
+				<div data-type="TextImage" data-element="文2">
+					文字圖片編輯器<!--點擊此行預設文字會出現CLEditor-->
+				</div>
+				<br />
+				<div class="event_btn_go" class="event_btn_go" data-type="Image" data-element="圖片1">
+					<img src="images/1.jpg" width="112" height="62" title="圖片選擇器" />
+				</div>
+				<div class="clear"></div>
+				<br />
+				<div class="ADbanner AD220x160 bg_b" style="cursor:pointer;" data-type="AdArea" onclick="" onmouseover="" onmouseout="">
+					<div data-type="AdUrl" data-textHeight="90" data-element="文33" data-textfloat="right" data-textWidth="315" style="display:none">
+						點擊上方編輯連結！
+					</div>
+					<div class="ad_textarea">
+						<div id="hiddenimage7" data-type="AdImage" data-element="圖片33" data-height="96px" data-width="112px" style="z-index:2; position:absolute; visibility:hidden;"><img src="images/article_pic3.gif" />
+						</div>
+						<div class="area_220x160" style="position:absolute;z-index:1;" data-type="AdText" data-textHeight="90" data-element="文34" data-textfloat="right" data-textWidth="315">
+							點擊這裡編輯文字！
+						</div>
+						<div data-type="AdImage" data-element="圖片34" data-height="96px" data-width="112px" style="width:220px; height:160px;background-color:white;position:absolute;"><img src="images/article_pic3.gif" />
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<br />
+				<br />
+				<br />
+				<div class="big_photo_wide" data-type="Movie" data-element="影片" style="cursor: pointer;">
+					<img src="images/article_big_clip.gif" width="640" height="360" />
+					<div class="youtubeedit">
+						按此編輯youtube！
+					</div>
+				</div>
+				<div class="clear"></div>
+				<br />
+				<div id="index_slidershow" data-type="BannerArea">
+					<div class="slideshow-container slideshow-home col-16" style="position: relative; z-index: 2; left: 0px; width: 940px;">
+						<a href="" class="slideshow-prev hidden">Prev</a><a href="" class="slideshow-next hidden">Next</a>
+						<div class="frame">
+							<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 4700px; left: -2820px;">
+								<li class="item carousel-home" style="cursor: pointer; float: left; width: 940px; height: 440px;" data-type="BannerImage" data-element="圖片1" data-height="96px" data-width="112px" onclick=""><img src="images/article_pic3.gif" width="940" height="440">
+									<div data-type="BannerUrl" data-textHeight="90" data-element="文1" data-textfloat="left" data-textWidth="315">
+										點擊上方編輯連結！
+									</div>
+								</li>
+								<li class="item carousel-home" style="cursor: pointer; float: left; width: 940px; height: 440px;" data-type="BannerImage" data-element="圖片2" data-height="96px" data-width="112px" onclick=""><img src="images/article_pic3.gif" width="940" height="440">
+									<div data-type="BannerUrl" data-textHeight="90" data-element="文2" data-textfloat="left" data-textWidth="315">
+										點擊上方編輯連結！
+									</div>
+								</li>
+								<li class="item carousel-home" style="cursor: pointer; float: left; width: 940px; height: 440px;" data-type="BannerImage" data-element="圖片3" data-height="96px" data-width="112px" onclick=""><img src="images/article_pic3.gif" width="940" height="440">
+									<div data-type="BannerUrl" data-textHeight="90" data-element="文3" data-textfloat="left" data-textWidth="315">
+										點擊上方編輯連結！
+									</div>
+								</li>
+								<li class="item carousel-home" style="cursor: pointer; float: left; width: 940px; height: 440px;" data-type="BannerImage" data-element="圖片4" data-height="96px" data-width="112px" onclick=""><img src="images/article_pic3.gif" width="940" height="440">
+									<div data-type="BannerUrl" data-textHeight="90" data-element="文4" data-textfloat="left" data-textWidth="315">
+										點擊上方編輯連結！
+									</div>
+								</li>
+								<li class="item carousel-home" style="cursor: pointer; float: left; width: 940px; height: 440px;" data-type="BannerImage" data-element="圖片5" data-height="96px" data-width="112px" onclick=""><img src="images/article_pic3.gif" width="940" height="440">
+									<div data-type="BannerUrl" data-textHeight="90" data-element="文5" data-textfloat="left" data-textWidth="315">
+										點擊上方編輯連結！
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div><a href="" class="pauseButton" style="display: none">pause</a>
+				</div>
+			</div>
+		</form>
+	</body>
 </html>
