@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Pseditor : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Pseditor</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/augustine-wen/pseditor">View on GitHub</a>
+
+          <h1 id="project_title">Pseditor</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/augustine-wen/pseditor/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/augustine-wen/pseditor/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="pseditor" class="anchor" href="#pseditor"><span class="octicon octicon-link"></span></a>PSEditor</h1>
+
+<p>PSEditor is an open source jQuery plugin, which provides a WYSIWYG HTML editor that can be easily added into any web site, and based on CLEditor.</p>
+
+<p>For <strong>demo</strong> see:<br><a href="http://ashramwen.github.io/PSEditor/">http://ashramwen.github.io/PSEditor/</a></p>
+
+<p>For <strong>downloads</strong>, see:<br><a href="http://ashramwen.github.io/PSEditor/releases/">http://ashramwen.github.io/PSEditor/releases/</a></p>
+
+<h2>
+<a name="required" class="anchor" href="#required"><span class="octicon octicon-link"></span></a>Required</h2>
+
+<ul>
+<li>
+<a href="http://jquery.com/">jQuery</a> : 1.10.1+</li>
+<li>
+<a href="http://jqueryui.com/">jQuery UI</a> : 1.9.2+</li>
+<li>
+<a href="http://premiumsoftware.net/cleditor/">CLEditor</a> :1.4.4+</li>
+<li>jquery.cleditor.plugin.js - Cleditor Plugin (source)</li>
+<li>jquery.pseditor.min.js - jQuery Plugin (minified)</li>
+<li>jquery.pseditor.css - Style Sheet (source)</li>
+<li>images/buttons.gif - CLEditor Toolbar Button Image Strip</li>
+<li>images/toolbar.gif - CLEditor Toolbar Background Image</li>
+<li>images/btn_cancel.png - Cancel Button Image</li>
+<li>images/btn_ok.png - Ok Button Image</li>
+<li>images/btn_picL.png - Left Button Image</li>
+<li>images/btn_picR.png - Right Button Image</li>
+<li>images/outerlink.png - OuterLink Button Image</li>
+<li>images/pic_bg.png - Album Background Image</li>
+<li>images/trash.png - Trash Button Image</li>
+</ul><h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"css/jquery.cleditor.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"css/pseditor.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://code.jquery.com/jquery-1.10.2.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"js/jquery.cleditor.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"js/jquery.cleditor.plugin.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"js/jquery.pseditor.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Html:</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"strContent"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+
+<p>JavaScript:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#strContent'</span><span class="p">).</span><span class="nx">PSEditor</span><span class="p">({</span>
+  <span class="nx">getImgUrl</span> <span class="o">:</span> <span class="s1">'testjson2'</span>
+<span class="p">});</span>
+</pre></div>
+
+<h2>
+<a name="option-parameter" class="anchor" href="#option-parameter"><span class="octicon octicon-link"></span></a>Option Parameter</h2>
+
+<ul>
+<li>
+<strong>getImgUrl</strong><br>
+Type: String<br>
+A string containing the URL to which the request <strong>Image List</strong> is sent, like <a href="https://github.com/ashramwen/PSEditor/blob/master/testjson2">this</a> or <a href="https://github.com/ashramwen/PSEditor/blob/master/testjson">this</a>
+</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Pseditor maintained by <a href="https://github.com/augustine-wen">augustine-wen</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
